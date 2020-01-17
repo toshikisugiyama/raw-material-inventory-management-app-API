@@ -18,7 +18,7 @@ class CreateMaterialsTable extends Migration
             $table->string('name');
             $table->string('control_code');
             $table->string('supplier');
-            $table->integer('total')->default(0);
+            $table->bigInteger('total')->default(0);
             $table->string('unit');
             $table->text('material_comment');
             $table->timestamps();

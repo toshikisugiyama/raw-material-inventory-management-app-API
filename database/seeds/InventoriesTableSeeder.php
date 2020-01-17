@@ -15,7 +15,7 @@ class InventoriesTableSeeder extends Seeder
     {
         $items = [
             [
-                'material_id' => 1,
+                'material_id' => 3,
                 'dead' => DateTime::dateTimeThisDecade(),
             ],
             [

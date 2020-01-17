@@ -12,7 +12,7 @@ class Inventory extends Model
      * @var array
      */
     protected $dispatchesEvents = [
-        'saved' => InventorySaved::class,
+        'saved' => Events\InventorySaved::class,
     ];
 
     protected $gurded = [];

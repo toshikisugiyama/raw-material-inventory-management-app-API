@@ -18,7 +18,7 @@ class CreateInventoriesTable extends Migration
             $table->unsignedBigInteger('material_id');
             $table->string('lot_code');
             $table->date('dead');
-            $table->integer('stock_quantity');
+            $table->bigInteger('stock_quantity');
             $table->text('inventory_comment');
             $table->integer('status');
             $table->timestamps();
