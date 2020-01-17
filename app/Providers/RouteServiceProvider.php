@@ -42,11 +42,21 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
+        $this->mapInternalApiRoutes();
+
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
 
         //
+    }
+
+    protected function mapInternalApiRoutes()
+    {
+        Route::prefix('internal_api')
+             ->middleware('web')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/internal_api.php'));
     }
 
     /**
@@ -62,6 +72,7 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
     }
+
 
     /**
      * Define the "api" routes for the application.
