@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Inventory;
+use App\Material;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -14,8 +15,12 @@ class InventoryController extends Controller
      */
     public function index()
     {
+        $materials = Material::all();
         $inventories = Inventory::all();
-        return $inventories;
+        return [
+            'materials' => $materials,
+            'inventories' => $inventories,
+        ];
     }
 
     /**
