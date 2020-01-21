@@ -20,7 +20,7 @@ class CreateInventoriesTable extends Migration
             $table->date('dead');
             $table->bigInteger('stock_quantity');
             $table->text('inventory_comment');
-            $table->integer('status');
+            $table->integer('status')->default(0);
             $table->timestamps();
 
             $table->foreign('material_id')->references('id')->on('materials')->onDelete('cascade');
