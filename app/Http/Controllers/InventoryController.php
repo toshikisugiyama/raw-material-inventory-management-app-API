@@ -75,7 +75,8 @@ class InventoryController extends Controller
      */
     public function update(Request $request, Inventory $inventory)
     {
-        //
+        $inventory->stock_quantity = $request->input('stock_quantity');
+        $inventory->save();
     }
 
     /**

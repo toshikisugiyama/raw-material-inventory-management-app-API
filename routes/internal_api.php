@@ -18,3 +18,4 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/', 'InventoryController@index')->name('inventory.index');
+Route::put('/inventories/{inventory}', 'InventoryController@update')->name('inventory.update');
